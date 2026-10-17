@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>PEDAL FIBRA | Bicicletas, Servicio y Accesorios en Hidalgo del Parral</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PEDAL FIBRA: Venta de bicicletas de montaña y ruta, accesorios, ropa, calzado y servicio de mantenimiento en Hidalgo del Parral, Chihuahua. Atención cercana y especializada.">
+    <meta name="description" content="PEDAL FIBRA: Venta de bicicletas Trek, Specialized, Scott, Orbea y más; ropa Fox, Rapha, Endura; componentes Shimano, SRAM, Maxxis y servicio de mantenimiento en Hidalgo del Parral, Chihuahua.">
     <style>
         :root {
             --primary: #0a7e8c;
@@ -28,12 +28,9 @@
             line-height: 1.6;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
 
-        /* Header / Nav */
         header {
             position: sticky;
             top: 0;
@@ -102,9 +99,7 @@
             transition: width 0.2s;
         }
 
-        nav a:hover::after {
-            width: 100%;
-        }
+        nav a:hover::after { width: 100%; }
 
         .nav-cta {
             background: var(--secondary);
@@ -115,11 +110,6 @@
             font-weight: 600;
         }
 
-        .nav-cta:hover {
-            opacity: 0.9;
-        }
-
-        /* Hero */
         .hero {
             padding: 40px 0 50px;
         }
@@ -157,9 +147,7 @@
             color: var(--dark);
         }
 
-        .hero h1 span {
-            color: var(--primary);
-        }
+        .hero h1 span { color: var(--primary); }
 
         .hero p {
             color: #4b5563;
@@ -287,15 +275,9 @@
             flex: 1;
         }
 
-        .hero-stat strong {
-            display: block;
-            font-size: 0.9rem;
-        }
+        .hero-stat strong { display: block; font-size: 0.9rem; }
 
-        /* Sections */
-        section {
-            padding: 40px 0;
-        }
+        section { padding: 40px 0; }
 
         h2.section-title {
             font-size: 1.6rem;
@@ -309,7 +291,6 @@
             margin-bottom: 24px;
         }
 
-        /* Products */
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -325,6 +306,12 @@
             flex-direction: column;
             gap: 8px;
             font-size: 0.88rem;
+        }
+
+        .card-img {
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 6px;
         }
 
         .card-header {
@@ -343,11 +330,22 @@
             font-weight: 500;
         }
 
+        .card-brand {
+            font-size: 0.78rem;
+            color: #6b7280;
+        }
+
         .price {
             font-weight: 700;
             color: var(--primary);
             margin: 4px 0;
             font-size: 0.95rem;
+        }
+
+        .price small {
+            font-weight: 400;
+            color: #9ca3af;
+            font-size: 0.78rem;
         }
 
         .card-footer {
@@ -384,7 +382,6 @@
             font-weight: 500;
         }
 
-        /* Services */
         .services-grid {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
@@ -437,7 +434,6 @@
             display: inline-block;
         }
 
-        /* About */
         .about-grid {
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
@@ -473,7 +469,6 @@
             color: #111827;
         }
 
-        /* CTA / Contact */
         .cta-section {
             background: #0f172a;
             color: #e5e7eb;
@@ -515,16 +510,31 @@
             font-size: 0.86rem;
         }
 
-        .cta-contact div {
-            margin-bottom: 4px;
-        }
+        .cta-contact div { margin-bottom: 4px; }
 
         .cta-label {
             color: #9ca3af;
             font-size: 0.78rem;
         }
 
-        /* Footer */
+        .services-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.86rem;
+            margin-top: 12px;
+        }
+
+        .services-table th,
+        .services-table td {
+            border: 1px solid #e5e7eb;
+            padding: 6px 8px;
+        }
+
+        .services-table th {
+            background: #f3f4f6;
+            text-align: left;
+        }
+
         footer {
             border-top: 1px solid #e5e7eb;
             padding: 18px 0 26px;
@@ -540,16 +550,13 @@
             align-items: center;
         }
 
-        .footer-links a {
-            margin-right: 12px;
-        }
+        .footer-links a { margin-right: 12px; }
 
         .social-links a {
             margin-right: 10px;
             color: #4b5563;
         }
 
-        /* Responsive */
         @media (max-width: 900px) {
             .hero-grid,
             .services-grid,
@@ -560,27 +567,15 @@
         }
 
         @media (max-width: 768px) {
-            nav ul {
-                display: none;
-            }
-            .hero {
-                padding-top: 24px;
-            }
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .grid-3 {
-                grid-template-columns: 1fr 1fr;
-            }
+            nav ul { display: none; }
+            .hero { padding-top: 24px; }
+            .hero h1 { font-size: 2rem; }
+            .grid-3 { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 600px) {
-            .grid-3 {
-                grid-template-columns: 1fr;
-            }
-            .hero-image {
-                min-height: 220px;
-            }
+            .grid-3 { grid-template-columns: 1fr; }
+            .hero-image { min-height: 220px; }
         }
     </style>
 </head>
@@ -620,28 +615,29 @@
                     para amantes del ciclismo
                 </h1>
                 <p>
-                    En PEDAL FIBRA encuentras bicicletas de montaña y ruta, componentes, accesorios, ropa, calzado 
-                    y servicio de mantenimiento profesional. Todo con una atención cercana y orientada a tus necesidades.
+                    En PEDAL FIBRA encuentras bicicletas Trek, Specialized, Scott, Orbea y más;
+                    ropa de ciclismo Fox, Rapha, Endura, BRAVA, GUD LIFE, y componentes Shimano, SRAM,
+                    Maxxis, Schwalbe y otros líderes del mercado. Todo con servicio profesional de taller.
                 </p>
 
                 <div class="hero-highlights">
                     <div class="highlight">
                         <span class="icon">★</span>
-                        Asesoría personalizada para cada ciclista
+                        Gamas básica, media y alta para cada tipo de ciclista
                     </div>
                     <div class="highlight">
                         <span class="icon">🔧</span>
-                        Taller especializado en MTB y ruta
+                        Taller especializado con precios claros
                     </div>
                     <div class="highlight">
                         <span class="icon">🛒</span>
-                        Catálogo digital listo para compras en línea
+                        Catálogo digital listo para futuras compras en línea
                     </div>
                 </div>
 
                 <div class="hero-actions">
                     <a href="#productos"><button class="btn-primary">Ver catálogo para ciclistas</button></a>
-                    <a href="#servicios"><button class="btn-secondary">Agendar mantenimiento</button></a>
+                    <a href="#servicios"><button class="btn-secondary">Ver precios de servicios</button></a>
                 </div>
                 <div class="hero-note">
                     Atención B2C para ciclistas recreativos y avanzados · Próximamente compra en línea
@@ -652,10 +648,10 @@
                 <div class="hero-tag">
                     <span></span> Servicio mismo día según disponibilidad
                 </div>
-                <h2>Taller y tienda en un solo lugar</h2>
+                <h2>Tienda y taller en un solo lugar</h2>
                 <p>
-                    Tráenos tu bicicleta de montaña o ruta para diagnóstico, servicio y ajuste profesional. 
-                    Mientras tanto, explora componentes, ropa y accesorios pensados para tu estilo de pedaleo.
+                    Tráenos tu bicicleta de montaña o ruta para diagnóstico, servicio y ajuste profesional.
+                    Mientras tanto, explora bicicletas, componentes, ropa y accesorios pensados para tu estilo de pedaleo.
                 </p>
                 <div class="hero-stats">
                     <div class="hero-stat">
@@ -663,8 +659,8 @@
                         Experiencia en ciclismo de montaña y ruta
                     </div>
                     <div class="hero-stat">
-                        <strong>Servicio integral</strong>
-                        Venta, mantenimiento y asesoría al ciclista
+                        <strong>Marcas líderes</strong>
+                        Trek, Specialized, Shimano, SRAM y más
                     </div>
                 </div>
             </div>
@@ -674,137 +670,326 @@
     <!-- PRODUCTOS -->
     <section id="productos">
         <div class="container">
-            <h2 class="section-title">Productos para ciclistas</h2>
+            <h2 class="section-title">Bicicletas y productos para ciclistas</h2>
             <p class="section-subtitle">
-                Pensado para clientes finales (B2C): selecciona la bicicleta, componentes o equipamiento ideal para tu 
-                nivel y tipo de ciclismo. Próximamente podrás finalizar tu compra en línea.
+                Catálogo pensado para clientes finales (B2C): bicicletas de distintas gamas, componentes,
+                accesorios, ropa y calzado. Precios de referencia en pesos mexicanos (MXN).
             </p>
 
             <div class="badge-b2c">
                 Enfoque:
-                <span>Atención directa al ciclista (B2C)</span>
+                <span>Venta directa al ciclista (B2C)</span>
             </div>
 
-            <h3 style="font-size:1.05rem; margin:14px 0 10px;">Bicicletas destacadas</h3>
+            <!-- Bicicletas de montaña -->
+            <h3 style="font-size:1.1rem; margin:16px 0 10px;">Bicicletas de montaña</h3>
+            <p style="font-size:0.85rem; color:#6b7280; margin-bottom:10px;">
+                Modelos para MTB recreativo, trail y competencia, con opciones en marcas como Trek, Specialized, Scott, Orbea y Alubike.
+            </p>
+            <div class="grid-3" style="margin-bottom:26px;">
+                <!-- MTB gama básica -->
+                <article class="card">
+                    <div class="card-img">
+                        <!-- CAMBIA ESTA URL POR UNA FOTO REAL DE TU BICI BÁSICA DE MONTAÑA -->
+                        <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Bicicleta de montaña gama básica">
+                    </div>
+                    <div class="card-header">MTB Alubike 29” Gama Básica</div>
+                    <div class="card-brand">Marca: Alubike (ejemplo de gama accesible)</div>
+                    <div class="card-tag">Recreativa · Ciudad y terracería ligera</div>
+                    <p>
+                        Cuadro de aluminio, frenos de disco mecánicos, 21 velocidades.
+                        Ideal para quienes inician en el MTB y rodadas recreativas.
+                    </p>
+                    <div class="price">$8,990 MXN <small>aprox.</small></div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Incluye ajuste inicial</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
+                </article>
+
+                <!-- MTB gama media -->
+                <article class="card">
+                    <div class="card-img">
+                        <!-- CAMBIA ESTA URL POR UNA FOTO REAL DE TU BICI MEDIA DE MONTAÑA -->
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Bicicleta de montaña gama media">
+                    </div>
+                    <div class="card-header">MTB Trek / Specialized 29” Gama Media</div>
+                    <div class="card-brand">Marcas: Trek, Specialized, Scott (según disponibilidad)</div>
+                    <div class="card-tag">XC recreativo · Rutas técnicas moderadas</div>
+                    <p>
+                        Suspensión delantera con bloqueo, frenos de disco hidráulicos,
+                        transmisión Shimano o SRAM 1x11. Perfecta para rutas más exigentes.
+                    </p>
+                    <div class="price">$15,900 MXN <small>aprox.</small></div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Servicio básico 1er mes sin costo</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
+                </article>
+
+                <!-- MTB gama alta -->
+                <article class="card">
+                    <div class="card-img">
+                        <!-- CAMBIA ESTA URL POR UNA FOTO REAL DE TU BICI ALTA DE MONTAÑA -->
+                        <img src="https://images.pexels.com/photos/1005820/pexels-photo-1005820.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Bicicleta de montaña gama alta">
+                    </div>
+                    <div class="card-header">MTB Doble Suspensión Orbea / Santa Cruz</div>
+                    <div class="card-brand">Marcas: Orbea, Santa Cruz, Pivot Cycles</div>
+                    <div class="card-tag">Trail · Enduro · Competencia</div>
+                    <p>
+                        Cuadro de aluminio o carbono, suspensiones Fox o RockShox,
+                        transmisión SRAM GX/XT o superior. Para ciclistas avanzados.
+                    </p>
+                    <div class="price">$48,500 MXN <small>aprox.</small></div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Incluye ajuste personalizado</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Bicicletas de ruta -->
+            <h3 style="font-size:1.1rem; margin:10px 0 10px;">Bicicletas de ruta y gravel</h3>
+            <p style="font-size:0.85rem; color:#6b7280; margin-bottom:10px;">
+                Opciones para entrenar en carretera, rodadas largas y aventuras gravel, con marcas como Trek, Specialized, Scott, Orbea y Cube.
+            </p>
+            <div class="grid-3" style="margin-bottom:26px;">
+                <!-- Ruta básica -->
+                <article class="card">
+                    <div class="card-img">
+                        <!-- CAMBIA ESTA URL POR UNA FOTO REAL DE TU BICI DE RUTA BÁSICA -->
+                        <img src="https://images.pexels.com/photos/792385/pexels-photo-792385.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Bicicleta de ruta básica">
+                    </div>
+                    <div class="card-header">Ruta Aluminio Gama Básica</div>
+                    <div class="card-brand">Marcas: Alubike, Trek (gamas de entrada)</div>
+                    <div class="card-tag">Entrenamiento ligero · Rodadas recreativas</div>
+                    <p>
+                        Cuadro de aluminio, transmisión Shimano Claris/Sora,
+                        frenos de herradura. Ideal para quienes inician en ruta.
+                    </p>
+                    <div class="price">$13,500 MXN <small>aprox.</small></div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Incluye fit básico</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
+                </article>
+
+                <!-- Ruta media -->
+                <article class="card">
+                    <div class="card-img">
+                        <!-- CAMBIA ESTA URL POR UNA FOTO REAL DE TU BICI DE RUTA MEDIA -->
+                        <img src="https://images.pexels.com/photos/1869996/pexels-photo-1869996.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Bicicleta de ruta gama media">
+                    </div>
+                    <div class="card-header">Ruta Aluminio/Carbono Gama Media</div>
+                    <div class="card-brand">Marcas: Trek, Specialized, Orbea, Cube</div>
+                    <div class="card-tag">Entrenamiento · Gran fondo</div>
+                    <p>
+                        Horquilla de carbono, transmisión Shimano 105/Ultegra o SRAM Rival,
+                        frenos de disco mecánicos o hidráulicos.
+                    </p>
+                    <div class="price">$24,900 MXN <small>aprox.</small></div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Incluye servicio a los 3 meses</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
+                </article>
+
+                <!-- Ruta/gravel alta -->
+                <article class="card">
+                    <div class="card-img">
+                        <!-- CAMBIA ESTA URL POR UNA FOTO REAL DE TU BICI DE RUTA ALTA -->
+                        <img src="https://images.pexels.com/photos/4488276/pexels-photo-4488276.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Bicicleta de ruta gama alta">
+                    </div>
+                    <div class="card-header">Ruta / Gravel Carbono Gama Alta</div>
+                    <div class="card-brand">Marcas: Scott, Orbea, Specialized</div>
+                    <div class="card-tag">Competencia · Gran fondo · Gravel</div>
+                    <p>
+                        Cuadro y horquilla de carbono, transmisión Shimano Ultegra/Di2 o
+                        SRAM Force, frenos de disco hidráulicos, ruedas DT Swiss.
+                    </p>
+                    <div class="price">$52,900 MXN <small>aprox.</small></div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Fit y ajustes incluidos</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Componentes y refacciones -->
+            <h3 style="font-size:1.1rem; margin:10px 0 10px;">Componentes y refacciones</h3>
+            <p style="font-size:0.85rem; color:#6b7280; margin-bottom:10px;">
+                Trabajamos con las principales marcas de componentes: Shimano, SRAM, Fox, RockShox, Maxxis, Schwalbe, DT Swiss, Campagnolo, OneUp Components, Cushcore y más.
+            </p>
             <div class="grid-3" style="margin-bottom:26px;">
                 <article class="card">
-                    <div class="card-header">Bicicleta de montaña aluminio 29”</div>
-                    <div class="card-tag">Ciclismo de montaña</div>
+                    <div class="card-img">
+                        <!-- CAMBIA POR FOTO REAL DE TRANSMISIÓN / CAMBIOS -->
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Transmisión y cambios para bicicleta">
+                    </div>
+                    <div class="card-header">Transmisiones Shimano / SRAM</div>
+                    <div class="card-brand">Marcas: Shimano, SRAM</div>
                     <p>
-                        Ideal para rutas recreativas y XC ligero. Cuadro de aluminio, frenos de disco y 
-                        transmisión confiable para terrenos variados.
+                        Grupos completos y piezas sueltas: cambios, palancas, cassettes,
+                        cadenas y bielas para MTB y ruta (gamas de entrada a alta).
                     </p>
-                    <div class="price">Desde $XX,XXX MXN</div>
+                    <div class="price">Cassettes desde $890 MXN</div>
                     <div class="card-footer">
-                        <span style="font-size:0.8rem; color:#6b7280;">Arma tu paquete con casco y luces</span>
+                        <span style="font-size:0.8rem; color:#6b7280;">Instalación desde $150 MXN</span>
                         <button class="btn-cart">Cotizar</button>
                     </div>
                 </article>
 
                 <article class="card">
-                    <div class="card-header">Bicicleta de ruta aluminio/carbono</div>
-                    <div class="card-tag">Ciclismo de ruta</div>
+                    <div class="card-img">
+                        <!-- CAMBIA POR FOTO REAL DE SUSPENSIONES -->
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Suspensiones Fox y RockShox">
+                    </div>
+                    <div class="card-header">Suspensiones Fox / RockShox</div>
+                    <div class="card-brand">Marcas: Fox Factory, RockShox</div>
                     <p>
-                        Para entrenar en carretera y participar en rodadas. Opciones en aluminio y 
-                        carbono, geometría cómoda para largas distancias.
+                        Horquillas y amortiguadores para MTB de diferentes recorridos,
+                        desde XC hasta enduro. Mejora el control y comodidad de tu bici.
                     </p>
-                    <div class="price">Desde $XX,XXX MXN</div>
+                    <div class="price">Horquillas desde $9,500 MXN</div>
                     <div class="card-footer">
-                        <span style="font-size:0.8rem; color:#6b7280;">Incluye ajuste inicial sin costo</span>
+                        <span style="font-size:0.8rem; color:#6b7280;">Servicio y mantenimiento especializado</span>
                         <button class="btn-cart">Cotizar</button>
                     </div>
                 </article>
 
                 <article class="card">
-                    <div class="card-header">Bicicleta para iniciarte en el ciclismo</div>
-                    <div class="card-tag">Principiantes</div>
+                    <div class="card-img">
+                        <!-- CAMBIA POR FOTO REAL DE LLANTAS -->
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Llantas Maxxis y Schwalbe">
+                    </div>
+                    <div class="card-header">Llantas Maxxis / Schwalbe</div>
+                    <div class="card-brand">Marcas: Maxxis, Schwalbe</div>
                     <p>
-                        Modelos pensados para quienes empiezan: cómodos, seguros y con componentes 
-                        que permiten actualizar la bicicleta con el tiempo.
+                        Neumáticos para montaña, ruta y gravel con diferentes compuestos
+                        y dibujos según terreno y estilo de manejo.
                     </p>
-                    <div class="price">Desde $X,XXX MXN</div>
+                    <div class="price">Desde $650 MXN c/u</div>
                     <div class="card-footer">
-                        <span style="font-size:0.8rem; color:#6b7280;">Te asesoramos según tu presupuesto</span>
+                        <span style="font-size:0.8rem; color:#6b7280;">Montaje desde $80 MXN por llanta</span>
                         <button class="btn-cart">Cotizar</button>
                     </div>
                 </article>
             </div>
 
-            <h3 style="font-size:1.05rem; margin:0 0 10px;">Componentes y accesorios</h3>
+            <!-- Ruedas y componentes especiales -->
+            <h3 style="font-size:1.1rem; margin:10px 0 10px;">Ruedas y componentes especiales</h3>
             <div class="grid-3" style="margin-bottom:26px;">
                 <article class="card">
-                    <div class="card-header">Componentes y refacciones</div>
+                    <div class="card-img">
+                        <!-- CAMBIA POR FOTO REAL DE RUEDAS -->
+                        <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Rines y ruedas DT Swiss y Campagnolo">
+                    </div>
+                    <div class="card-header">Rines y ruedas DT Swiss / Campagnolo</div>
+                    <div class="card-brand">Marcas: DT Swiss, Campagnolo</div>
                     <p>
-                        Transmisiones, frenos, cadenas, desviadores, cockpits y más. 
-                        Te ayudamos a elegir la pieza adecuada para tu tipo de bici y rodadas.
+                        Juegos de ruedas para ruta y MTB, mazas de alto rendimiento
+                        y rines reforzados o ligeros según la disciplina.
                     </p>
-                    <ul class="checklist" style="margin-top:4px;">
-                        <li>Marcas reconocidas y compatibles</li>
-                        <li>Instalación en nuestro taller</li>
-                    </ul>
+                    <div class="price">Rines desde $1,800 MXN el par</div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Armado y centrado adicional</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
                 </article>
 
                 <article class="card">
-                    <div class="card-header">Llantas y rines</div>
+                    <div class="card-img">
+                        <!-- CAMBIA POR FOTO REAL DE ONEUP/CUSHCORE -->
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Componentes OneUp y Cushcore">
+                    </div>
+                    <div class="card-header">Componentes OneUp / Cushcore</div>
+                    <div class="card-brand">Marcas: OneUp Components, Cushcore</div>
                     <p>
-                        Opciones para montaña y ruta, desde uso recreativo hasta entrenamiento intenso. 
-                        Mejora agarre, comodidad y rendimiento.
+                        Tijas telescópicas, pedales, manubrios e insertos antipinchazos
+                        para mejorar el desempeño y protección de tu MTB.
                     </p>
-                    <ul class="checklist" style="margin-top:4px;">
-                        <li>Llantas todo terreno y rodadoras</li>
-                        <li>Rines reforzados y ligeros</li>
-                    </ul>
-                </article>
-
-                <article class="card">
-                    <div class="card-header">Accesorios esenciales</div>
-                    <p>
-                        Cascos, luces, ciclocomputadores, bidones, portabidones, bombas, herramientas 
-                        y más para rodar seguro y preparado.
-                    </p>
-                    <ul class="checklist" style="margin-top:4px;">
-                        <li>Kits básicos para principiantes</li>
-                        <li>Accesorios para ciclistas urbanos y de ruta</li>
-                    </ul>
+                    <div class="price">Tijas telescópicas desde $4,500 MXN</div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Instalación profesional disponible</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
                 </article>
             </div>
 
-            <h3 style="font-size:1.05rem; margin:0 0 10px;">Ropa y calzado especializado</h3>
+            <!-- Ropa, calzado y accesorios -->
+            <h3 style="font-size:1.1rem; margin:10px 0 10px;">Ropa, calzado y accesorios</h3>
+            <p style="font-size:0.85rem; color:#6b7280; margin-bottom:10px;">
+                Trabajamos con marcas líderes en ropa y equipamiento para MTB, ruta y gravel:
+                Fox Racing, Troy Lee Designs, 100%, Rapha, Pas Normal Studios, MAAP, Giordana, Sportful,
+                Endura y marcas mexicanas como BRAVA, GUD LIFE, Kaax, Mazawi y Kma.
+            </p>
             <div class="grid-3">
                 <article class="card">
-                    <div class="card-header">Ropa especializada para ciclismo</div>
+                    <div class="card-img">
+                        <!-- CAMBIA POR FOTO REAL DE JERSEYS / ROPA MTB -->
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Ropa MTB Fox y Troy Lee Designs">
+                    </div>
+                    <div class="card-header">Ropa MTB Fox / Troy Lee / 100%</div>
+                    <div class="card-brand">MTB, enduro y descenso</div>
                     <p>
-                        Jerseys, shorts con badana, chamarras, guantes y más, pensados para que 
-                        ruedes con comodidad y protección en cualquier clima.
+                        Jerseys, shorts, guantes y protecciones para montaña, enduro y descenso,
+                        con diseños y tecnología de las marcas líderes.
                     </p>
-                    <ul class="checklist" style="margin-top:4px;">
-                        <li>Ropa para montaña y ruta</li>
-                        <li>Opciones para hombre y mujer</li>
-                    </ul>
+                    <div class="price">Jerseys desde $950 MXN</div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Shorts desde $1,350 MXN</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
                 </article>
 
                 <article class="card">
-                    <div class="card-header">Zapatos para ciclismo</div>
+                    <div class="card-img">
+                        <!-- CAMBIA POR FOTO REAL DE ROPA RUTA PREMIUM -->
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Ropa de ruta Rapha y MAAP">
+                    </div>
+                    <div class="card-header">Ropa Ruta Rapha / MAAP / Pas Normal</div>
+                    <div class="card-brand">Alta gama para ruta y gravel</div>
                     <p>
-                        Calzado para pedales de plataforma y de clip, según tu estilo de pedaleo 
-                        y el tipo de ciclismo que practiques.
+                        Jerseys y bib shorts premium con ajuste de rendimiento,
+                        telas técnicas y diseño minimalista para largas distancias.
                     </p>
-                    <ul class="checklist" style="margin-top:4px;">
-                        <li>Modelos recreativos y de alto rendimiento</li>
-                        <li>Asesoría en talla y tipo de suela</li>
-                    </ul>
+                    <div class="price">Jerseys desde $2,300 MXN</div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Bib shorts desde $3,200 MXN</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
                 </article>
 
                 <article class="card">
-                    <div class="card-header">Próximamente: catálogo en línea</div>
+                    <div class="card-img">
+                        <!-- CAMBIA POR FOTO REAL DE MARCAS MEXICANAS -->
+                        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=800"
+                             alt="Ropa de ciclismo marcas mexicanas">
+                    </div>
+                    <div class="card-header">Ropa marcas mexicanas (BRAVA, GUD LIFE, etc.)</div>
+                    <div class="card-brand">Calidad nacional</div>
                     <p>
-                        Estamos preparando nuestro catálogo digital completo para que puedas 
-                        consultar existencias, comparar productos y comprar en línea.
+                        Jerseys y shorts de marcas mexicanas como BRAVA, GUD LIFE, Kaax, Mazawi y Kma,
+                        con gran relación calidad-precio.
                     </p>
-                    <ul class="checklist" style="margin-top:4px;">
-                        <li>Fotos y fichas técnicas detalladas</li>
-                        <li>Filtros por tipo de ciclismo y nivel</li>
-                    </ul>
+                    <div class="price">Jerseys desde $750 MXN</div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Shorts desde $1,050 MXN</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
                 </article>
             </div>
         </div>
@@ -813,10 +998,10 @@
     <!-- SERVICIOS -->
     <section id="servicios">
         <div class="container">
-            <h2 class="section-title">Servicios de mantenimiento y reparación</h2>
+            <h2 class="section-title">Servicios de taller y mantenimiento</h2>
             <p class="section-subtitle">
-                Cuidamos tu bicicleta como si fuera nuestra. Desde ajustes básicos para principiantes 
-                hasta mantenimiento completo para ciclistas de montaña y ruta.
+                Cuidamos tu bicicleta como si fuera nuestra. Estos son algunos de los servicios más
+                solicitados con precios de referencia. Pregunta por paquetes y promociones.
             </p>
 
             <div class="services-grid">
@@ -824,18 +1009,74 @@
                     <h3 style="font-size:1.05rem; margin-bottom:8px;">Taller especializado</h3>
                     <ul class="checklist">
                         <li>Servicio y mantenimiento de bicicletas de montaña.</li>
-                        <li>Servicio y mantenimiento de bicicletas de ruta.</li>
+                        <li>Servicio y mantenimiento de bicicletas de ruta y gravel.</li>
                         <li>Reparación y ajuste de frenos, cambios, dirección y suspensión.</li>
-                        <li>Armado y ajuste de bicicletas nuevas.</li>
-                        <li>Instalación de componentes y accesorios.</li>
+                        <li>Armado y ajuste de bicicletas nuevas (Trek, Specialized, Scott, Orbea, etc.).</li>
+                        <li>Instalación de componentes Shimano, SRAM, Fox, RockShox, Maxxis, Schwalbe y más.</li>
                         <li>Revisión preventiva antes de competencias o rodadas largas.</li>
                     </ul>
 
-                    <h3 style="font-size:1.05rem; margin:18px 0 8px;">Asesoría para ciclistas (B2C)</h3>
-                    <p style="font-size:0.9rem; color:#4b5563;">
-                        Te orientamos según tu nivel, objetivos y presupuesto para que tomes 
-                        mejores decisiones al comprar bicicleta, componentes, ropa o zapatos. 
-                        Nuestro objetivo es que disfrutes cada rodada con el equipo adecuado.
+                    <h3 style="font-size:1.05rem; margin:18px 0 6px;">Tabla de precios de servicios (MXN)</h3>
+                    <table class="services-table">
+                        <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Descripción breve</th>
+                            <th>Precio desde</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Servicio general MTB</td>
+                            <td>Limpieza, lubricación, ajuste de frenos y cambios, revisión general.</td>
+                            <td>$450</td>
+                        </tr>
+                        <tr>
+                            <td>Servicio general Ruta / Gravel</td>
+                            <td>Limpieza, ajuste de transmisión, frenos y revisión de ruedas.</td>
+                            <td>$480</td>
+                        </tr>
+                        <tr>
+                            <td>Ajuste de cambios</td>
+                            <td>Regulación de cambios delantero y trasero (Shimano / SRAM).</td>
+                            <td>$180</td>
+                        </tr>
+                        <tr>
+                            <td>Ajuste de frenos</td>
+                            <td>Frenos de disco o herradura, alineación y regulación.</td>
+                            <td>$180</td>
+                        </tr>
+                        <tr>
+                            <td>Centrado de rueda</td>
+                            <td>Ajuste de tensión de radios para enderezar la rueda.</td>
+                            <td>$200</td>
+                        </tr>
+                        <tr>
+                            <td>Cambio de cadena</td>
+                            <td>Instalación y ajuste de nueva cadena (pieza no incluida).</td>
+                            <td>$120</td>
+                        </tr>
+                        <tr>
+                            <td>Instalación de componente</td>
+                            <td>Manubrio, potencia, asiento, frenos, tija telescópica, etc. (por pieza).</td>
+                            <td>$150</td>
+                        </tr>
+                        <tr>
+                            <td>Servicio suspensión delantera</td>
+                            <td>Revisión básica de horquilla Fox / RockShox (según modelo).</td>
+                            <td>$650</td>
+                        </tr>
+                        <tr>
+                            <td>Armado de bicicleta nueva</td>
+                            <td>Armado desde caja, ajustes completos.</td>
+                            <td>$550</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <p style="font-size:0.78rem; color:#6b7280; margin-top:6px;">
+                        *Los precios pueden variar según el estado de la bicicleta, tipo de componente y complejidad del trabajo.
+                        Cotizamos con gusto tu caso específico.
                     </p>
                 </div>
 
@@ -845,7 +1086,7 @@
                             Solicita tu servicio o cotización
                         </h3>
                         <p style="font-size:0.8rem; color:#6b7280; margin-bottom:10px;">
-                            Completa este formulario y te contactaremos para confirmar horario, 
+                            Completa este formulario y te contactaremos para confirmar horario,
                             servicio y costos aproximados.
                         </p>
                         <form>
@@ -862,9 +1103,10 @@
                             <select id="tipo-servicio">
                                 <option>Selecciona una opción</option>
                                 <option>Servicio general bicicleta de montaña</option>
-                                <option>Servicio general bicicleta de ruta</option>
+                                <option>Servicio general bicicleta de ruta/gravel</option>
                                 <option>Ajuste de cambios y frenos</option>
                                 <option>Instalación de componente/accesorio</option>
+                                <option>Servicio de suspensión</option>
                                 <option>Diagnóstico y cotización</option>
                             </select>
 
@@ -889,7 +1131,7 @@
         <div class="container">
             <h2 class="section-title">Sobre PEDAL FIBRA</h2>
             <p class="section-subtitle">
-                Una empresa local con historia en el mundo del ciclismo, en proceso de transformación digital 
+                Una empresa local con historia en el mundo del ciclismo, en proceso de transformación digital
                 para estar más cerca de ti también en línea.
             </p>
 
@@ -897,27 +1139,27 @@
                 <div>
                     <span class="pill">Historia</span>
                     <p style="font-size:0.9rem; color:#4b5563; margin-bottom:10px;">
-                        PEDAL FIBRA es una pequeña empresa con más de 15 años de trayectoria en 
+                        PEDAL FIBRA es una pequeña empresa con más de 15 años de trayectoria en
                         Hidalgo del Parral, Chihuahua, dedicada al sector del ciclismo.
                     </p>
                     <p style="font-size:0.9rem; color:#4b5563; margin-bottom:10px;">
-                        Nos especializamos en atender a personas que practican ciclismo de montaña y 
+                        Nos especializamos en atender a personas que practican ciclismo de montaña y
                         ciclismo de ruta, ofreciendo una combinación de productos y servicios:
-                        bicicletas de distintos niveles, componentes, llantas, rines, accesorios, ropa y 
+                        bicicletas de distintos niveles, componentes, llantas, rines, accesorios, ropa y
                         zapatos especializados; además de un taller para mantenimiento y reparación.
                     </p>
                     <p style="font-size:0.9rem; color:#4b5563;">
-                        Hoy estamos dando el siguiente paso: aprovechar herramientas digitales para mostrar 
-                        mejor nuestro catálogo, facilitar la comunicación contigo y, más adelante, 
+                        Hoy estamos dando el siguiente paso: aprovechar herramientas digitales para mostrar
+                        mejor nuestro catálogo, facilitar la comunicación contigo y, más adelante,
                         ofrecerte compras y pagos en línea, sin dejar de lado la atención cercana en nuestro local.
                     </p>
 
                     <div style="margin-top:14px;">
                         <h3 style="font-size:1rem; margin-bottom:4px;">Misión</h3>
                         <p style="font-size:0.88rem; color:#4b5563;">
-                            Brindar productos y servicios especializados para los amantes del ciclismo, 
-                            ofreciendo bicicletas, componentes, accesorios, ropa y calzado, así como servicios 
-                            de mantenimiento y reparación, mediante una atención cercana, confiable y orientada 
+                            Brindar productos y servicios especializados para los amantes del ciclismo,
+                            ofreciendo bicicletas, componentes, accesorios, ropa y calzado, así como servicios
+                            de mantenimiento y reparación, mediante una atención cercana, confiable y orientada
                             a las necesidades de cada cliente.
                         </p>
                     </div>
@@ -925,9 +1167,9 @@
                     <div style="margin-top:10px;">
                         <h3 style="font-size:1rem; margin-bottom:4px;">Visión</h3>
                         <p style="font-size:0.88rem; color:#4b5563;">
-                            Consolidar a PEDAL FIBRA como una empresa reconocida en el sector del ciclismo 
-                            en Hidalgo del Parral y ampliar progresivamente su alcance mediante una estrategia 
-                            de presencia digital y comercio electrónico, ofreciendo a sus clientes una experiencia 
+                            Consolidar a PEDAL FIBRA como una empresa reconocida en el sector del ciclismo
+                            en Hidalgo del Parral y ampliar progresivamente su alcance mediante una estrategia
+                            de presencia digital y comercio electrónico, ofreciendo a sus clientes una experiencia
                             de compra y servicio accesible tanto de manera presencial como a través de Internet.
                         </p>
                     </div>
@@ -969,8 +1211,8 @@
                         </div>
                     </div>
                     <p style="font-size:0.82rem; color:#6b7280; margin-top:10px;">
-                        Esta página forma parte de nuestra estrategia de transformación digital: 
-                        estamos construyendo canales como sitio web, redes sociales y comunicación 
+                        Esta página forma parte de nuestra estrategia de transformación digital:
+                        estamos construyendo canales como sitio web, redes sociales y comunicación
                         electrónica para estar cada vez más cerca de ti.
                     </p>
                 </div>
@@ -985,14 +1227,15 @@
                 <div>
                     <h2>¿Listo para tu próxima rodada?</h2>
                     <p>
-                        Ven a nuestro local en Hidalgo del Parral o contáctanos para orientación, 
-                        cotizaciones y servicios. Atendemos a ciclistas de montaña y de ruta, 
+                        Ven a nuestro local en Hidalgo del Parral o contáctanos para orientación,
+                        cotizaciones y servicios. Atendemos a ciclistas de montaña y de ruta,
                         desde principiantes hasta avanzados.
                     </p>
                     <div class="cta-badges">
                         <div class="cta-badge">Venta de bicicletas</div>
                         <div class="cta-badge">Servicio y mantenimiento</div>
-                        <div class="cta-badge">Accesorios y equipamiento</div>
+                        <div class="cta-badge">Componentes y accesorios</div>
+                        <div class="cta-badge">Ropa y calzado</div>
                         <div class="cta-badge">Asesoría personalizada</div>
                         <div class="cta-badge">Transformación digital B2C</div>
                     </div>
@@ -1045,10 +1288,7 @@
 </footer>
 
 <script>
-    // Año automático en el footer
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Aquí podrías añadir integración futura con un backend o servicio de correo
 </script>
 
 </body>
