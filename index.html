@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PEDAL FIBRA | Bicicletas, Servicio y Accesorios en Hidalgo del Parral</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PEDAL FIBRA: Venta de bicicletas de montaña y ruta, accesorios, ropa, calzado y servicio de mantenimiento en Hidalgo del Parral, Chihuahua. Atención cercana y especializada.">
+    <style>
+        :root {
+            --primary: #0a7e8c;
+            --secondary: #f39c12;
+            --dark: #1f2933;
+            --light: #f7fafc;
+            --gray: #6b7280;
+            --accent: #16a34a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            color: #111827;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header / Nav */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            color: var(--primary);
+        }
+
+        .logo span.icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 3px solid var(--secondary);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--secondary);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            font-size: 0.95rem;
+        }
+
+        nav a {
+            padding: 6px 0;
+            position: relative;
+            color: #374151;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.2s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--secondary);
+            color: #111827;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .nav-cta:hover {
+            opacity: 0.9;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 40px 0 50px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #e0f2fe;
+            color: #0369a1;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-badge span.dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #22c55e;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            line-height: 1.15;
+            margin-bottom: 14px;
+            color: var(--dark);
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            color: #4b5563;
+            font-size: 0.98rem;
+            margin-bottom: 18px;
+        }
+
+        .hero-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-bottom: 22px;
+        }
+
+        .highlight {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.86rem;
+            color: #374151;
+        }
+
+        .highlight span.icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 999px;
+            background: #ecfdf3;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: var(--accent);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #ffffff;
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-secondary {
+            padding: 8px 16px;
+            border-radius: 999px;
+            border: 1px solid #d1d5db;
+            background: #ffffff;
+            color: #374151;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .hero-note {
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+
+        .hero-image {
+            position: relative;
+            background: radial-gradient(circle at top left, #0ea5e9 0, #0f172a 55%);
+            border-radius: 18px;
+            min-height: 260px;
+            overflow: hidden;
+            color: #e5e7eb;
+            padding: 20px;
+        }
+
+        .hero-image h2 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .hero-image p {
+            font-size: 0.86rem;
+            color: #e5e7eb;
+            max-width: 260px;
+        }
+
+        .hero-tag {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: rgba(15,23,42,0.7);
+            border-radius: 999px;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hero-tag span {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: #22c55e;
+        }
+
+        .hero-stats {
+            position: absolute;
+            bottom: 14px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            font-size: 0.8rem;
+        }
+
+        .hero-stat {
+            background: rgba(15,23,42,0.8);
+            border-radius: 12px;
+            padding: 8px 10px;
+            flex: 1;
+        }
+
+        .hero-stat strong {
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 0;
+        }
+
+        h2.section-title {
+            font-size: 1.6rem;
+            margin-bottom: 6px;
+            color: var(--dark);
+        }
+
+        p.section-subtitle {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 24px;
+        }
+
+        /* Products */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            border-radius: 14px;
+            border: 1px solid #e5e7eb;
+            background: #ffffff;
+            padding: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.88rem;
+        }
+
+        .card-header {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #111827;
+        }
+
+        .card-tag {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: #ecfdf3;
+            color: #166534;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .price {
+            font-weight: 700;
+            color: var(--primary);
+            margin: 4px 0;
+            font-size: 0.95rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 4px;
+        }
+
+        .btn-cart {
+            background: #111827;
+            color: #ffffff;
+            border-radius: 999px;
+            border: none;
+            font-size: 0.8rem;
+            padding: 6px 10px;
+            cursor: pointer;
+        }
+
+        .badge-b2c {
+            display: inline-flex;
+            gap: 6px;
+            align-items: center;
+            font-size: 0.8rem;
+            color: #4b5563;
+            margin-bottom: 12px;
+        }
+
+        .badge-b2c span {
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: #eff6ff;
+            color: #1d4ed8;
+            font-weight: 500;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 26px;
+            align-items: flex-start;
+        }
+
+        ul.checklist {
+            list-style: none;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+
+        ul.checklist li {
+            margin-bottom: 8px;
+            display: flex;
+            gap: 8px;
+        }
+
+        ul.checklist li::before {
+            content: "✔";
+            color: var(--accent);
+            font-size: 0.8rem;
+            margin-top: 3px;
+        }
+
+        .contact-box {
+            border-radius: 14px;
+            border: 1px solid #e5e7eb;
+            padding: 16px;
+            background: #f9fafb;
+            font-size: 0.86rem;
+        }
+
+        .contact-box input,
+        .contact-box textarea,
+        .contact-box select {
+            width: 100%;
+            padding: 7px 9px;
+            border-radius: 8px;
+            border: 1px solid #d1d5db;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        .contact-box label {
+            font-size: 0.8rem;
+            color: #4b5563;
+            margin-bottom: 2px;
+            display: inline-block;
+        }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 26px;
+        }
+
+        .pill {
+            display: inline-flex;
+            padding: 3px 10px;
+            background: #eef2ff;
+            color: #4338ca;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            margin-bottom: 10px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            font-size: 0.82rem;
+        }
+
+        .value-item {
+            background: #f9fafb;
+            border-radius: 10px;
+            padding: 8px 10px;
+        }
+
+        .value-item strong {
+            display: block;
+            margin-bottom: 2px;
+            color: #111827;
+        }
+
+        /* CTA / Contact */
+        .cta-section {
+            background: #0f172a;
+            color: #e5e7eb;
+            border-radius: 18px;
+            padding: 24px 20px;
+            display: grid;
+            grid-template-columns: 1.4fr 0.9fr;
+            gap: 24px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .cta-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .cta-section p {
+            font-size: 0.88rem;
+            color: #9ca3af;
+            margin-bottom: 10px;
+        }
+
+        .cta-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .cta-badge {
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 999px;
+            border: 1px solid #374151;
+        }
+
+        .cta-contact {
+            font-size: 0.86rem;
+        }
+
+        .cta-contact div {
+            margin-bottom: 4px;
+        }
+
+        .cta-label {
+            color: #9ca3af;
+            font-size: 0.78rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #e5e7eb;
+            padding: 18px 0 26px;
+            font-size: 0.82rem;
+            color: #6b7280;
+        }
+
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .footer-links a {
+            margin-right: 12px;
+        }
+
+        .social-links a {
+            margin-right: 10px;
+            color: #4b5563;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-grid,
+            .services-grid,
+            .about-grid,
+            .cta-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .hero {
+                padding-top: 24px;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .hero-image {
+                min-height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav">
+        <div class="logo">
+            <span class="icon">PF</span>
+            <span>PEDAL FIBRA</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto" class="nav-cta">Agenda tu servicio</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+        <div class="container hero-grid">
+            <div>
+                <div class="hero-badge">
+                    <span class="dot"></span>
+                    15 años impulsando el ciclismo en Hidalgo del Parral
+                </div>
+                <h1>
+                    Bicicletas, servicio y equipo
+                    <span>especializado</span>
+                    para amantes del ciclismo
+                </h1>
+                <p>
+                    En PEDAL FIBRA encuentras bicicletas de montaña y ruta, componentes, accesorios, ropa, calzado 
+                    y servicio de mantenimiento profesional. Todo con una atención cercana y orientada a tus necesidades.
+                </p>
+
+                <div class="hero-highlights">
+                    <div class="highlight">
+                        <span class="icon">★</span>
+                        Asesoría personalizada para cada ciclista
+                    </div>
+                    <div class="highlight">
+                        <span class="icon">🔧</span>
+                        Taller especializado en MTB y ruta
+                    </div>
+                    <div class="highlight">
+                        <span class="icon">🛒</span>
+                        Catálogo digital listo para compras en línea
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#productos"><button class="btn-primary">Ver catálogo para ciclistas</button></a>
+                    <a href="#servicios"><button class="btn-secondary">Agendar mantenimiento</button></a>
+                </div>
+                <div class="hero-note">
+                    Atención B2C para ciclistas recreativos y avanzados · Próximamente compra en línea
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="hero-tag">
+                    <span></span> Servicio mismo día según disponibilidad
+                </div>
+                <h2>Taller y tienda en un solo lugar</h2>
+                <p>
+                    Tráenos tu bicicleta de montaña o ruta para diagnóstico, servicio y ajuste profesional. 
+                    Mientras tanto, explora componentes, ropa y accesorios pensados para tu estilo de pedaleo.
+                </p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <strong>+15 años</strong>
+                        Experiencia en ciclismo de montaña y ruta
+                    </div>
+                    <div class="hero-stat">
+                        <strong>Servicio integral</strong>
+                        Venta, mantenimiento y asesoría al ciclista
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section id="productos">
+        <div class="container">
+            <h2 class="section-title">Productos para ciclistas</h2>
+            <p class="section-subtitle">
+                Pensado para clientes finales (B2C): selecciona la bicicleta, componentes o equipamiento ideal para tu 
+                nivel y tipo de ciclismo. Próximamente podrás finalizar tu compra en línea.
+            </p>
+
+            <div class="badge-b2c">
+                Enfoque:
+                <span>Atención directa al ciclista (B2C)</span>
+            </div>
+
+            <h3 style="font-size:1.05rem; margin:14px 0 10px;">Bicicletas destacadas</h3>
+            <div class="grid-3" style="margin-bottom:26px;">
+                <article class="card">
+                    <div class="card-header">Bicicleta de montaña aluminio 29”</div>
+                    <div class="card-tag">Ciclismo de montaña</div>
+                    <p>
+                        Ideal para rutas recreativas y XC ligero. Cuadro de aluminio, frenos de disco y 
+                        transmisión confiable para terrenos variados.
+                    </p>
+                    <div class="price">Desde $XX,XXX MXN</div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Arma tu paquete con casco y luces</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">Bicicleta de ruta aluminio/carbono</div>
+                    <div class="card-tag">Ciclismo de ruta</div>
+                    <p>
+                        Para entrenar en carretera y participar en rodadas. Opciones en aluminio y 
+                        carbono, geometría cómoda para largas distancias.
+                    </p>
+                    <div class="price">Desde $XX,XXX MXN</div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Incluye ajuste inicial sin costo</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">Bicicleta para iniciarte en el ciclismo</div>
+                    <div class="card-tag">Principiantes</div>
+                    <p>
+                        Modelos pensados para quienes empiezan: cómodos, seguros y con componentes 
+                        que permiten actualizar la bicicleta con el tiempo.
+                    </p>
+                    <div class="price">Desde $X,XXX MXN</div>
+                    <div class="card-footer">
+                        <span style="font-size:0.8rem; color:#6b7280;">Te asesoramos según tu presupuesto</span>
+                        <button class="btn-cart">Cotizar</button>
+                    </div>
+                </article>
+            </div>
+
+            <h3 style="font-size:1.05rem; margin:0 0 10px;">Componentes y accesorios</h3>
+            <div class="grid-3" style="margin-bottom:26px;">
+                <article class="card">
+                    <div class="card-header">Componentes y refacciones</div>
+                    <p>
+                        Transmisiones, frenos, cadenas, desviadores, cockpits y más. 
+                        Te ayudamos a elegir la pieza adecuada para tu tipo de bici y rodadas.
+                    </p>
+                    <ul class="checklist" style="margin-top:4px;">
+                        <li>Marcas reconocidas y compatibles</li>
+                        <li>Instalación en nuestro taller</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">Llantas y rines</div>
+                    <p>
+                        Opciones para montaña y ruta, desde uso recreativo hasta entrenamiento intenso. 
+                        Mejora agarre, comodidad y rendimiento.
+                    </p>
+                    <ul class="checklist" style="margin-top:4px;">
+                        <li>Llantas todo terreno y rodadoras</li>
+                        <li>Rines reforzados y ligeros</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">Accesorios esenciales</div>
+                    <p>
+                        Cascos, luces, ciclocomputadores, bidones, portabidones, bombas, herramientas 
+                        y más para rodar seguro y preparado.
+                    </p>
+                    <ul class="checklist" style="margin-top:4px;">
+                        <li>Kits básicos para principiantes</li>
+                        <li>Accesorios para ciclistas urbanos y de ruta</li>
+                    </ul>
+                </article>
+            </div>
+
+            <h3 style="font-size:1.05rem; margin:0 0 10px;">Ropa y calzado especializado</h3>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-header">Ropa especializada para ciclismo</div>
+                    <p>
+                        Jerseys, shorts con badana, chamarras, guantes y más, pensados para que 
+                        ruedes con comodidad y protección en cualquier clima.
+                    </p>
+                    <ul class="checklist" style="margin-top:4px;">
+                        <li>Ropa para montaña y ruta</li>
+                        <li>Opciones para hombre y mujer</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">Zapatos para ciclismo</div>
+                    <p>
+                        Calzado para pedales de plataforma y de clip, según tu estilo de pedaleo 
+                        y el tipo de ciclismo que practiques.
+                    </p>
+                    <ul class="checklist" style="margin-top:4px;">
+                        <li>Modelos recreativos y de alto rendimiento</li>
+                        <li>Asesoría en talla y tipo de suela</li>
+                    </ul>
+                </article>
+
+                <article class="card">
+                    <div class="card-header">Próximamente: catálogo en línea</div>
+                    <p>
+                        Estamos preparando nuestro catálogo digital completo para que puedas 
+                        consultar existencias, comparar productos y comprar en línea.
+                    </p>
+                    <ul class="checklist" style="margin-top:4px;">
+                        <li>Fotos y fichas técnicas detalladas</li>
+                        <li>Filtros por tipo de ciclismo y nivel</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+        <div class="container">
+            <h2 class="section-title">Servicios de mantenimiento y reparación</h2>
+            <p class="section-subtitle">
+                Cuidamos tu bicicleta como si fuera nuestra. Desde ajustes básicos para principiantes 
+                hasta mantenimiento completo para ciclistas de montaña y ruta.
+            </p>
+
+            <div class="services-grid">
+                <div>
+                    <h3 style="font-size:1.05rem; margin-bottom:8px;">Taller especializado</h3>
+                    <ul class="checklist">
+                        <li>Servicio y mantenimiento de bicicletas de montaña.</li>
+                        <li>Servicio y mantenimiento de bicicletas de ruta.</li>
+                        <li>Reparación y ajuste de frenos, cambios, dirección y suspensión.</li>
+                        <li>Armado y ajuste de bicicletas nuevas.</li>
+                        <li>Instalación de componentes y accesorios.</li>
+                        <li>Revisión preventiva antes de competencias o rodadas largas.</li>
+                    </ul>
+
+                    <h3 style="font-size:1.05rem; margin:18px 0 8px;">Asesoría para ciclistas (B2C)</h3>
+                    <p style="font-size:0.9rem; color:#4b5563;">
+                        Te orientamos según tu nivel, objetivos y presupuesto para que tomes 
+                        mejores decisiones al comprar bicicleta, componentes, ropa o zapatos. 
+                        Nuestro objetivo es que disfrutes cada rodada con el equipo adecuado.
+                    </p>
+                </div>
+
+                <div>
+                    <div class="contact-box" id="contacto">
+                        <h3 style="font-size:1.02rem; margin-bottom:6px; color:#111827;">
+                            Solicita tu servicio o cotización
+                        </h3>
+                        <p style="font-size:0.8rem; color:#6b7280; margin-bottom:10px;">
+                            Completa este formulario y te contactaremos para confirmar horario, 
+                            servicio y costos aproximados.
+                        </p>
+                        <form>
+                            <label for="nombre">Nombre completo</label>
+                            <input type="text" id="nombre" placeholder="Tu nombre">
+
+                            <label for="telefono">Teléfono / WhatsApp</label>
+                            <input type="tel" id="telefono" placeholder="Ej. 6XX XXX XXXX">
+
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" placeholder="tucorreo@ejemplo.com">
+
+                            <label for="tipo-servicio">Tipo de servicio</label>
+                            <select id="tipo-servicio">
+                                <option>Selecciona una opción</option>
+                                <option>Servicio general bicicleta de montaña</option>
+                                <option>Servicio general bicicleta de ruta</option>
+                                <option>Ajuste de cambios y frenos</option>
+                                <option>Instalación de componente/accesorio</option>
+                                <option>Diagnóstico y cotización</option>
+                            </select>
+
+                            <label for="detalle">Cuéntanos qué necesitas</label>
+                            <textarea id="detalle" rows="3" placeholder="Describe el problema o lo que te gustaría hacer con tu bici."></textarea>
+
+                            <button type="submit" class="btn-primary" style="width:100%; margin-top:4px;">
+                                Enviar solicitud
+                            </button>
+                            <p style="font-size:0.75rem; color:#9ca3af; margin-top:6px;">
+                                *Formulario de demostración. Configura el envío mediante correo o sistema de reservas.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros">
+        <div class="container">
+            <h2 class="section-title">Sobre PEDAL FIBRA</h2>
+            <p class="section-subtitle">
+                Una empresa local con historia en el mundo del ciclismo, en proceso de transformación digital 
+                para estar más cerca de ti también en línea.
+            </p>
+
+            <div class="about-grid">
+                <div>
+                    <span class="pill">Historia</span>
+                    <p style="font-size:0.9rem; color:#4b5563; margin-bottom:10px;">
+                        PEDAL FIBRA es una pequeña empresa con más de 15 años de trayectoria en 
+                        Hidalgo del Parral, Chihuahua, dedicada al sector del ciclismo.
+                    </p>
+                    <p style="font-size:0.9rem; color:#4b5563; margin-bottom:10px;">
+                        Nos especializamos en atender a personas que practican ciclismo de montaña y 
+                        ciclismo de ruta, ofreciendo una combinación de productos y servicios:
+                        bicicletas de distintos niveles, componentes, llantas, rines, accesorios, ropa y 
+                        zapatos especializados; además de un taller para mantenimiento y reparación.
+                    </p>
+                    <p style="font-size:0.9rem; color:#4b5563;">
+                        Hoy estamos dando el siguiente paso: aprovechar herramientas digitales para mostrar 
+                        mejor nuestro catálogo, facilitar la comunicación contigo y, más adelante, 
+                        ofrecerte compras y pagos en línea, sin dejar de lado la atención cercana en nuestro local.
+                    </p>
+
+                    <div style="margin-top:14px;">
+                        <h3 style="font-size:1rem; margin-bottom:4px;">Misión</h3>
+                        <p style="font-size:0.88rem; color:#4b5563;">
+                            Brindar productos y servicios especializados para los amantes del ciclismo, 
+                            ofreciendo bicicletas, componentes, accesorios, ropa y calzado, así como servicios 
+                            de mantenimiento y reparación, mediante una atención cercana, confiable y orientada 
+                            a las necesidades de cada cliente.
+                        </p>
+                    </div>
+
+                    <div style="margin-top:10px;">
+                        <h3 style="font-size:1rem; margin-bottom:4px;">Visión</h3>
+                        <p style="font-size:0.88rem; color:#4b5563;">
+                            Consolidar a PEDAL FIBRA como una empresa reconocida en el sector del ciclismo 
+                            en Hidalgo del Parral y ampliar progresivamente su alcance mediante una estrategia 
+                            de presencia digital y comercio electrónico, ofreciendo a sus clientes una experiencia 
+                            de compra y servicio accesible tanto de manera presencial como a través de Internet.
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="pill">Valores</span>
+                    <p style="font-size:0.86rem; color:#4b5563; margin-bottom:8px;">
+                        Nuestros valores guían cada servicio, recomendación y venta:
+                    </p>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <strong>Calidad</strong>
+                            Ofrecer productos y servicios que realmente respondan a lo que necesitas.
+                        </div>
+                        <div class="value-item">
+                            <strong>Servicio</strong>
+                            Acompañarte antes, durante y después de la compra o del mantenimiento.
+                        </div>
+                        <div class="value-item">
+                            <strong>Confianza</strong>
+                            Relaciones comerciales transparentes y responsables.
+                        </div>
+                        <div class="value-item">
+                            <strong>Compromiso</strong>
+                            Cumplir con lo prometido en cada trabajo y recomendación.
+                        </div>
+                        <div class="value-item">
+                            <strong>Orientación al cliente</strong>
+                            Entender tu perfil de ciclista para sugerirte la mejor opción.
+                        </div>
+                        <div class="value-item">
+                            <strong>Innovación</strong>
+                            Incorporar herramientas digitales para mejorar tu experiencia.
+                        </div>
+                        <div class="value-item">
+                            <strong>Responsabilidad</strong>
+                            Actuar con profesionalismo en todos nuestros procesos.
+                        </div>
+                    </div>
+                    <p style="font-size:0.82rem; color:#6b7280; margin-top:10px;">
+                        Esta página forma parte de nuestra estrategia de transformación digital: 
+                        estamos construyendo canales como sitio web, redes sociales y comunicación 
+                        electrónica para estar cada vez más cerca de ti.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / CONTACTO GENERAL -->
+    <section>
+        <div class="container">
+            <div class="cta-section">
+                <div>
+                    <h2>¿Listo para tu próxima rodada?</h2>
+                    <p>
+                        Ven a nuestro local en Hidalgo del Parral o contáctanos para orientación, 
+                        cotizaciones y servicios. Atendemos a ciclistas de montaña y de ruta, 
+                        desde principiantes hasta avanzados.
+                    </p>
+                    <div class="cta-badges">
+                        <div class="cta-badge">Venta de bicicletas</div>
+                        <div class="cta-badge">Servicio y mantenimiento</div>
+                        <div class="cta-badge">Accesorios y equipamiento</div>
+                        <div class="cta-badge">Asesoría personalizada</div>
+                        <div class="cta-badge">Transformación digital B2C</div>
+                    </div>
+                </div>
+                <div class="cta-contact">
+                    <div>
+                        <div class="cta-label">Ubicación</div>
+                        <div>Hidalgo del Parral, Chihuahua, México</div>
+                    </div>
+                    <div style="margin-top:8px;">
+                        <div class="cta-label">Horario (sujeto a cambios)</div>
+                        <div>Lunes a Viernes: 10:00 a 14:00 y 16:00 a 19:00</div>
+                        <div>Sábado: 10:00 a 14:00</div>
+                    </div>
+                    <div style="margin-top:8px;">
+                        <div class="cta-label">Contacto</div>
+                        <div>Teléfono / WhatsApp: (añade aquí tu número)</div>
+                        <div>Correo: (añade aquí tu correo de contacto)</div>
+                    </div>
+                    <div style="margin-top:10px;">
+                        <a href="#contacto"><button class="btn-secondary" style="width:100%;">Enviar mensaje desde la web</button></a>
+                    </div>
+                    <p style="font-size:0.78rem; color:#9ca3af; margin-top:8px;">
+                        Próximamente: catálogo digital completo, solicitudes de servicio desde la web y métodos de pago en línea.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <div>
+            © <span id="year"></span> PEDAL FIBRA · Todos los derechos reservados
+        </div>
+        <div class="footer-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#nosotros">Nosotros</a>
+        </div>
+        <div class="social-links">
+            <span style="margin-right:6px;">Síguenos:</span>
+            <a href="#" title="Facebook">Facebook</a>
+            <a href="#" title="Instagram">Instagram</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Año automático en el footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Aquí podrías añadir integración futura con un backend o servicio de correo
+</script>
+
+</body>
+</html>
